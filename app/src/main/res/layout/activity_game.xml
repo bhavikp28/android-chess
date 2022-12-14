@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_game"
+    android:background="@color/purple"
+    tools:context="com.example.android1.activity.Activity_Game">
+
+
+    <LinearLayout
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <GridView
+            android:drawSelectorOnTop="true"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:id="@+id/gridview_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:columnWidth="60dp"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="0dp"
+            android:numColumns="8"
+            android:padding="0dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0dp">
+        </GridView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:background="@android:color/holo_red_dark"
+                android:id="@+id/previous_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:text="undo" />
+
+            <Button
+                android:background="@android:color/holo_orange_dark"
+                android:id="@+id/aiButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AI" />
+
+            <Button
+                android:background="@android:color/holo_green_dark"
+                android:id="@+id/drawButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:text="draw" />
+
+            <Button
+                android:background="@android:color/holo_purple"
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:text="resign" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

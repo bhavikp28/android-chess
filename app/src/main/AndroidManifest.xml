@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android1">
+
+    <application
+        android:allowBackup="true"
+        android:label="AndroidChess1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.Activity_Replay"></activity>
+        <activity
+            android:name=".activity.Activity_Games"
+            android:label="Load Game"
+            android:parentActivityName=".activity.Activity_Main" />
+        <activity android:name=".activity.Activity_Main"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.Activity_Game"
+            android:label="Game"
+            android:parentActivityName=".activity.Activity_Main" />
+    </application>
+
+</manifest>
